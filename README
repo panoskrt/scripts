@@ -1,8 +1,8 @@
-Scripts
-
-1
-2
-3
-4
-5
-
+=> ssh_proxy.sh - Setting proxy over SSH.
+=> SEcalc.sh - Shell calculator for speedup and efficiency.
+=> set_OpenNebula.sh - Automatic DHCP discovery for OpenNebula VMs.
+=> wattsLog.sh - Reports usage of system in Watts using IPMI sensors.
+=> disk_usage.sh - Reports disk space usage and mails the sysadmin.
+=> sshLogins.sh - Reports on all SSH logins and mails the sysadmin.
+=> stddev.sh - Calculates the Standard deviation, arithemtic mean, median and condidence interval
+=> xenclone.sh - Clones Xen VM images.
