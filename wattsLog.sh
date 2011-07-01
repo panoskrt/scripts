@@ -24,7 +24,7 @@ code=$3
 getAvg(){
   totalwatts=`cat ${logfile} | awk '{total = total + $1}END{print total}'`
   elements=`cat  ${logfile} | wc -l`
-  avgwatts=`expr ${totalwatts} / ${elements}`
+  avgwatts=`echo "${totalwatts} / ${elements}" | bc`
 
   printf "\n\n Average watts: ${avgwatts}\n\n"
 }
