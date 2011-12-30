@@ -16,6 +16,22 @@
 ############################################################################
 #!/bin/bash
 
+disclaimer()
+{
+echo "
+=======================================================
+Every individual diver is responsible for planning
+and conducting dives using SCUBA equipment up to the
+trained and certified qualification he or she holds.
+
+The creator of this program does not have any
+responsibility for symptoms of Decompressions Sickness
+when the suggested values of this program are used
+for conducting a dive.
+========================================================
+"
+}
+
 mod(){
    echo -n "NITROX mix: "; read mix
    MOD=`echo "scale=2; (((1.6/$mix)*10)*100)-10" | bc`
@@ -77,6 +93,8 @@ absolute(){
    ABS=`echo "scale=2; (($depth/10)+1)" | bc`
    echo " Absolute pressure at depth of $depth MSW: $ABS ATM"
 }
+
+disclaimer
 
 echo " 1 - Maximum Operational Depth (MOD)"
 echo " 2 - Operational Depth (OD)"
