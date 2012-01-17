@@ -94,6 +94,12 @@ absolute(){
    echo " Absolute pressure at depth of $depth MSW: $ABS ATM"
 }
 
+altitude(){
+   echo -n " Depth: "; read depth
+   echo -n " Altitude: "; read altitude
+   ./calcDepth.sh $altitude $depth 
+}
+
 disclaimer
 
 echo " 1 - Maximum Operational Depth (MOD)"
@@ -104,6 +110,7 @@ echo " 5 - Nitrogen percentage compared to Air"
 echo " 6 - Oxygen partial pressure (PO2)"
 echo " 7 - Central Nervous Systems Toxicity (CNS)"
 echo " 8 - Absolute pressure"
+echo " 9 - Altitude diving"
 echo
 echo -n " Function: "; read option
 
@@ -131,6 +138,9 @@ case "$option" in
 	  ;;
 	8)
 	  absolute
+	  ;;
+	9)
+	  altitude
 	  ;;
 	*)
 	  echo " Please choose a valid option from the menu"
