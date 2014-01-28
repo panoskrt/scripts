@@ -1,4 +1,4 @@
-Description: Full back up a web site + database where only cPanel access is available.
+Description: Full back up a web site + database where only cPanel and FTP access is available.
 
 1) backup.sh - Goes on the remote server to run as a cronjob.
 2) ftp.sh - Runs locally as a cronjob
